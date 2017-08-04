@@ -1,5 +1,5 @@
 
-#define N 524288 // cardinality
+#define N 8192 // cardinality
 #define D 4 //full dimension
 #define Distr "i" // full
 
