@@ -5,8 +5,13 @@ def fsum(points):
 		rank.append(sum(p))
 	
 	return rank
-	
-	
+
+def fmin_sum(points):
+	rank = list()
+	for p in points:
+		rank.append([min(p),sum(p)])
+	return rank
+
 def ssmall(numbers):
 	m1,m2 = float(1024*1024), float(1024*1024)
 	for x in numbers:
@@ -24,5 +29,4 @@ def min_fsum(points):
 		rank.append(m1+m2)
 	return rank
 		
-		
-		
+

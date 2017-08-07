@@ -1,6 +1,8 @@
 import os
 
+SCALE = 1024*1024*1024
 def gdata(fname,lineSZ):
+	global SCALE
 	fp = open(fname,'r')
 	points = list()
 	
@@ -10,7 +12,7 @@ def gdata(fname,lineSZ):
 		lines = data.split("\n")
 		for line in data.strip().split("\n"):
 			#print line
-			p = [ float(v) for v in line.strip().split(",") ]
+			p = [ int(float(v)*SCALE) for v in line.strip().split(",") ]
 			#print p
 			points.append(p)
 		data = fp.read(buffer)
